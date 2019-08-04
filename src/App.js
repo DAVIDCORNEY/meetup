@@ -7,7 +7,7 @@ class App extends Component {
       <div className="container text-center">
         <div className="row justify-content-center">
           <div className="col-10 col-md-10 col-lg-10">
-            <h1>Meeting</h1>
+            <h1>MeetUp</h1>
             <p className="lead">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               commodo a justo vitae aliquet. Vivamus erat justo, eleifend a sem
@@ -19,6 +19,9 @@ class App extends Component {
             </p>
             <a href="/register" className="btn btn-outline-primary mr-2">
               Register
+            </a>
+            <a href="/login" className="btn btn-outline-primary mr-2">
+              Login
             </a>
           </div>
         </div>
