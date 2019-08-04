@@ -23,6 +23,9 @@ class App extends Component {
             <a href="/login" className="btn btn-outline-primary mr-2">
               Login
             </a>
+            <a href="/meetings" className="btn btn-primary">
+              Meetings
+            </a>
           </div>
         </div>
       </div>
