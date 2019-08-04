@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import Home from "./Home/Home";
 
 class App extends Component {
-  state = {};
+  state = {
+    user: "Ray"
+  };
   render() {
-    return <Home />;
+    const user = this.state.user;
+    return <Home user={user} />;
   }
 }
 
