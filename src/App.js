@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Home from "./Home/Home";
+import WelcomeMessage from "./WelcomeMessage/WelcomeMessage";
 
 class App extends Component {
   state = {
@@ -7,7 +8,12 @@ class App extends Component {
   };
   render() {
     const user = this.state.user;
-    return <Home user={user} />;
+    return (
+      <>
+        {user && <WelcomeMessage user={user} />}
+        <Home user={user} />
+      </>
+    );
   }
 }
 
