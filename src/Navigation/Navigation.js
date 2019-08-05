@@ -8,8 +8,13 @@ class Navigation extends Component {
       <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
         <div className="container-fluid">
           <a href="/" className="navbar-brand">
-            Meeting Log
+            MeetUp
           </a>
+          <div className="navbar-nav ml auto">
+            <a className="nav-item nav-link" href="/login">
+              log in
+            </a>
+          </div>
         </div>
       </nav>
     );
