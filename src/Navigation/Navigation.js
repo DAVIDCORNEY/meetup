@@ -14,6 +14,9 @@ class Navigation extends Component {
             <a className="nav-item nav-link" href="/login">
               log in
             </a>
+            <a className="nav-item nav-link" href="/register">
+              register
+            </a>
           </div>
         </div>
       </nav>
