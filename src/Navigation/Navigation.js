@@ -11,6 +11,9 @@ class Navigation extends Component {
             MeetUp
           </a>
           <div className="navbar-nav ml auto">
+            <a className="nav-item nav-link" href="/meetings">
+              meetings
+            </a>
             <a className="nav-item nav-link" href="/login">
               log in
             </a>
