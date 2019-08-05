@@ -4,6 +4,7 @@ import { FaUsers } from "react-icons/fa";
 class Navigation extends Component {
   state = {};
   render() {
+    const { user } = this.props;
     return (
       <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
         <div className="container-fluid">
@@ -11,18 +12,26 @@ class Navigation extends Component {
             MeetUp
           </a>
           <div className="navbar-nav ml auto">
-            <a className="nav-item nav-link" href="/meetings">
-              meetings
-            </a>
-            <a className="nav-item nav-link" href="/login">
-              log in
-            </a>
-            <a className="nav-item nav-link" href="/register">
-              register
-            </a>
-            <a className="nav-item nav-link" href="login">
-              log out
-            </a>
+            {user && (
+              <a className="nav-item nav-link" href="/meetings">
+                meetings
+              </a>
+            )}
+            {!user && (
+              <a className="nav-item nav-link" href="/login">
+                log in
+              </a>
+            )}
+            {!user && (
+              <a className="nav-item nav-link" href="/register">
+                register
+              </a>
+            )}
+            {user && (
+              <a className="nav-item nav-link" href="login">
+                log out
+              </a>
+            )}
           </div>
         </div>
       </nav>
