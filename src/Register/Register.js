@@ -40,6 +40,8 @@ class Register extends Component {
                         placeholder="Name"
                         name="name"
                         required
+                        value={this.state.name}
+                        onChange={this.handleUserInput}
                       />
                     </section>
                   </div>
