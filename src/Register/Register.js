@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 
 class Register extends Component {
+  state = {
+    name: "",
+    email: "",
+    passwordOne: "",
+    passwordTwo: ""
+  };
   render() {
     return (
       <form className="mt-3">
