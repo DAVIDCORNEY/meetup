@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 
 class WelcomeMessage extends Component {
   render() {
@@ -8,9 +9,9 @@ class WelcomeMessage extends Component {
         <span className="text-secondary font-weight-bold pl-1">
           Welcome {user},
         </span>
-        <a href="/" className="font-weight-bold text-primary pl-1">
+        <Link to="/login" className="font-weight-bold text-primary pl-1">
           log out
-        </a>
+        </Link>
       </div>
     );
   }
