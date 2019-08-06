@@ -10,6 +10,24 @@ class Register extends Component {
               <div className="card bg-light">
                 <div className="card-body">
                   <h3 className="font-weight-light mb3">Register</h3>
+                  <div className="form-row">
+                    <section className="col-sm-12 form-group">
+                      <label
+                        className="form-control-label sr-only"
+                        htmlFor="name"
+                      >
+                        Name
+                      </label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        id="name"
+                        placeholder="Name"
+                        name="name"
+                        required
+                      />
+                    </section>
+                  </div>
                 </div>
               </div>
             </div>
