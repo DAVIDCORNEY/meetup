@@ -62,6 +62,11 @@ class Register extends Component {
                       />
                     </section>
                   </div>
+                  <div className="form-group text-right mb-0">
+                    <button className="btn btn-primary" type="submit">
+                      Register
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
