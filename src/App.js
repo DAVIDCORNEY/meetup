@@ -11,7 +11,7 @@ import Register from "./Register/Register";
 
 class App extends Component {
   state = {
-    user: "Barry"
+    user: null
   };
 
   componentDidMount() {
