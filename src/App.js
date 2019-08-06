@@ -5,7 +5,7 @@ import Navigation from "./Navigation/Navigation";
 
 class App extends Component {
   state = {
-    user: "Roy"
+    user: "Barry"
   };
   render() {
     const user = this.state.user;
