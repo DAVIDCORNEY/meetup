@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FaUsers } from "react-icons/fa";
+import { Link } from "@reach/router";
 
 class Navigation extends Component {
   state = {};
