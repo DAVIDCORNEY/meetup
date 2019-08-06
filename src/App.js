@@ -6,7 +6,7 @@ import { Router } from "@reach/router";
 
 class App extends Component {
   state = {
-    user: "Barry"
+    user: null
   };
   render() {
     const user = this.state.user;
