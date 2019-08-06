@@ -28,6 +28,22 @@ class Register extends Component {
                       />
                     </section>
                   </div>
+                  <section className="form-group">
+                    <label
+                      className="form-control-label sr-only"
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      className="form-control"
+                      type="email"
+                      id="email"
+                      placeholder="Email"
+                      required
+                      name="email"
+                    />
+                  </section>
                 </div>
               </div>
             </div>
