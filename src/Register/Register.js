@@ -44,6 +44,24 @@ class Register extends Component {
                       name="email"
                     />
                   </section>
+                  <div className="form-row">
+                    <section className="col-sm-6 form-group">
+                      <input
+                        className="form-control"
+                        type="password"
+                        placeholder="Password"
+                        name="passwordOne"
+                      />
+                    </section>
+                    <section className="col-sm-6 form-group">
+                      <input
+                        className="form-control"
+                        type="password"
+                        placeholder="Repeat Password"
+                        name="passwordTwo"
+                      />
+                    </section>
+                  </div>
                 </div>
               </div>
             </div>
