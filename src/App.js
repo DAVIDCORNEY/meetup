@@ -14,7 +14,10 @@ class App extends Component {
       <>
         <Navigation user={user} />
         {user && <WelcomeMessage user={user} />}
-        <Home user={user} />
+
+        <Router>
+          <Home path="/" user={user} />
+        </Router>
       </>
     );
   }
