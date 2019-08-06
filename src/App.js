@@ -4,6 +4,7 @@ import WelcomeMessage from "./WelcomeMessage/WelcomeMessage";
 import Navigation from "./Navigation/Navigation";
 import Login from "./Login/Login";
 import Meetings from "./Meetings/Meetings";
+import Register from "./Register/Register";
 import { Router } from "@reach/router";
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
           <Home path="/" user={user} />
           <Login path="/login" />
           <Meetings path="/meetings" />
+          <Register path="/register" />
         </Router>
       </>
     );
