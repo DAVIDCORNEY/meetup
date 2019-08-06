@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import { Router } from "@reach/router";
+import firebase from "./Firebase";
+
 import Home from "./Home/Home";
 import WelcomeMessage from "./WelcomeMessage/WelcomeMessage";
 import Navigation from "./Navigation/Navigation";
 import Login from "./Login/Login";
 import Meetings from "./Meetings/Meetings";
 import Register from "./Register/Register";
-import { Router } from "@reach/router";
 
 class App extends Component {
   state = {
