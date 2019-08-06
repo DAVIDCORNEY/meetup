@@ -3,11 +3,12 @@ import Home from "./Home/Home";
 import WelcomeMessage from "./WelcomeMessage/WelcomeMessage";
 import Navigation from "./Navigation/Navigation";
 import Login from "./Login/Login";
+import Meetings from "./Meetings/Meetings";
 import { Router } from "@reach/router";
 
 class App extends Component {
   state = {
-    user: null
+    user: "Barry"
   };
   render() {
     const user = this.state.user;
@@ -19,6 +20,7 @@ class App extends Component {
         <Router>
           <Home path="/" user={user} />
           <Login path="/login" />
+          <Meetings path="/meetings" />
         </Router>
       </>
     );
