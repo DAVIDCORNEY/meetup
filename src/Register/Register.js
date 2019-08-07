@@ -30,7 +30,7 @@ class Register extends Component {
   };
 
   handleSubmit = event => {
-    const regInfo = {
+    let regInfo = {
       displayName: this.state.displayName,
       email: this.state.email,
       password: this.state.passwordOne
