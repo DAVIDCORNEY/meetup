@@ -59,6 +59,8 @@ class Register extends Component {
                       placeholder="Email"
                       required
                       name="email"
+                      value={this.state.email}
+                      onChange={this.handleUserInput}
                     />
                   </section>
                   <div className="form-row">
@@ -68,6 +70,8 @@ class Register extends Component {
                         type="password"
                         placeholder="Password"
                         name="passwordOne"
+                        value={this.state.passwordOne}
+                        onChange={this.handleUserInput}
                       />
                     </section>
                     <section className="col-sm-6 form-group">
@@ -76,6 +80,8 @@ class Register extends Component {
                         type="password"
                         placeholder="Repeat Password"
                         name="passwordTwo"
+                        value={this.state.passwordTwo}
+                        onChange={this.handleUserInput}
                       />
                     </section>
                   </div>
