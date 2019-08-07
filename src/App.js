@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Router } from "@reach/router";
+import { Router, navigate } from "@reach/router";
 import firebase from "./Firebase";
 
 import Home from "./Home/Home";
@@ -34,12 +34,13 @@ class App extends Component {
           displayName: DBUser.displayName,
           userId: DBUser.uid
         });
+        navigate("./meetings");
       });
     });
   };
 
   render() {
-    const user = this.state.user;
+    const user = this.state.displayName;
     return (
       <>
         <Navigation user={user} />
