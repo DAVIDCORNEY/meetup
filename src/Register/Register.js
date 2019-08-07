@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FormMessage from "../FormMessage/FormMessage";
 
 class Register extends Component {
   state = {
@@ -12,14 +13,13 @@ class Register extends Component {
   handleUserInput = event => {
     const inputName = event.target.name;
     const inputValue = event.target.value;
-    const { passwordOne, passwordTwo } = this.state;
 
     this.setState(
       {
         [inputName]: inputValue
       },
       () => {
-        if (passwordOne !== passwordTwo) {
+        if (this.state.passwordOne !== this.state.passwordTwo) {
           this.setState({ errorMessage: "Passwords do not match" });
         } else {
           this.setState({ errorMessage: null });
@@ -29,6 +29,7 @@ class Register extends Component {
   };
 
   render() {
+    const message = this.state.errorMessage;
     return (
       <form className="mt-3">
         <div className="container">
@@ -38,7 +39,9 @@ class Register extends Component {
                 <div className="card-body">
                   <h3 className="font-weight-light mb3">Register</h3>
                   <div className="form-row">
-                    {this.state.errorMessage ? this.state.errorMessage : null}
+                    {this.state.errorMessage !== null ? (
+                      <FormMessage message={message} />
+                    ) : null}
                     <section className="col-sm-12 form-group">
                       <label
                         className="form-control-label sr-only"
