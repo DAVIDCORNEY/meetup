@@ -36,7 +36,7 @@ class App extends Component {
         this.setState({
           user: DBUser,
           displayName: DBUser.displayName,
-          userId: DBUser.uid
+          userID: DBUser.uid
         });
         navigate("./meetings");
       });
