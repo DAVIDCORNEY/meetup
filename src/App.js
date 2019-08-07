@@ -40,11 +40,12 @@ class App extends Component {
   };
 
   render() {
-    const user = this.state.displayName;
+    const user = this.state.user;
+    const userName = this.state.displayName;
     return (
       <>
         <Navigation user={user} />
-        {user && <WelcomeMessage user={user} />}
+        {user && <WelcomeMessage userName={userName} />}
 
         <Router>
           <Home path="/" user={user} />
