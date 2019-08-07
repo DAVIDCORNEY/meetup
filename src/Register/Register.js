@@ -4,7 +4,7 @@ import firebase from "../Firebase";
 
 class Register extends Component {
   state = {
-    name: "",
+    displayName: "",
     email: "",
     passwordOne: "",
     passwordTwo: "",
@@ -31,7 +31,7 @@ class Register extends Component {
 
   handleSubmit = event => {
     const regInfo = {
-      name: this.state.name,
+      displayName: this.state.displayName,
       email: this.state.email,
       password: this.state.passwordOne
     };
@@ -39,6 +39,9 @@ class Register extends Component {
     firebase
       .auth()
       .createUserWithEmailAndPassword(regInfo.email, regInfo.password)
+      .then(() => {
+        this.props.registerUser(regInfo.displayName);
+      })
       .catch(error => {
         if (error.message !== null) {
           this.setState({ errorMessage: error.message });
