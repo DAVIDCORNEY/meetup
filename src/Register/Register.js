@@ -5,15 +5,27 @@ class Register extends Component {
     name: "",
     email: "",
     passwordOne: "",
-    passwordTwo: ""
+    passwordTwo: "",
+    errorMessage: null
   };
 
   handleUserInput = event => {
     const inputName = event.target.name;
     const inputValue = event.target.value;
-    this.setState({
-      [inputName]: inputValue
-    });
+    const { passwordOne, passwordTwo } = this.state;
+
+    this.setState(
+      {
+        [inputName]: inputValue
+      },
+      () => {
+        if (passwordOne !== passwordTwo) {
+          this.setState({ errorMessage: "Passwords do not match" });
+        } else {
+          this.setState({ errorMessage: null });
+        }
+      }
+    );
   };
 
   render() {
@@ -26,6 +38,7 @@ class Register extends Component {
                 <div className="card-body">
                   <h3 className="font-weight-light mb3">Register</h3>
                   <div className="form-row">
+                    {this.state.errorMessage ? this.state.errorMessage : null}
                     <section className="col-sm-12 form-group">
                       <label
                         className="form-control-label sr-only"
