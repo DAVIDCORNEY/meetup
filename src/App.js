@@ -63,8 +63,10 @@ class App extends Component {
     const userName = this.state.displayName;
     return (
       <>
-        <Navigation user={user} />
-        {user && <WelcomeMessage userName={userName} />}
+        <Navigation user={user} logoutUser={this.logoutUser} />
+        {user && (
+          <WelcomeMessage userName={userName} logoutUser={this.logoutUser} />
+        )}
 
         <Router>
           <Home path="/" user={user} />
