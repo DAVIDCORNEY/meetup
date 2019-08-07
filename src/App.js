@@ -43,6 +43,21 @@ class App extends Component {
     });
   };
 
+  logoutUser = event => {
+    event.preventDefault();
+    this.setState({
+      user: null,
+      displayName: null,
+      userID: null
+    });
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        navigate("./login");
+      });
+  };
+
   render() {
     const user = this.state.user;
     const userName = this.state.displayName;
