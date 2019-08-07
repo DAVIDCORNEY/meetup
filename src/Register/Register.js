@@ -68,16 +68,16 @@ class Register extends Component {
                     <section className="col-sm-12 form-group">
                       <label
                         className="form-control-label sr-only"
-                        htmlFor="name"
+                        htmlFor="displayName"
                       >
-                        Name
+                        Display Name
                       </label>
                       <input
                         className="form-control"
                         type="text"
-                        id="name"
+                        id="displayName"
                         placeholder="Name"
-                        name="name"
+                        name="displayName"
                         required
                         value={this.state.name}
                         onChange={this.handleUserInput}
