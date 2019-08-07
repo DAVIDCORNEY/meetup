@@ -11,7 +11,9 @@ import Register from "./Register/Register";
 
 class App extends Component {
   state = {
-    user: null
+    user: null,
+    displayName: null,
+    userID: null
   };
 
   componentDidMount() {
@@ -21,6 +23,20 @@ class App extends Component {
       this.setState({ user: DBUser });
     });
   }
+
+  registerUser = userName => {
+    firebase.auth().onAuthStateChanged(DBUser => {
+      DBUser.updateProfile({
+        displayName: userName
+      }).then(() => {
+        this.setState({
+          user: DBUser,
+          displayName: DBUser.displayName,
+          userId: DBUser.uid
+        });
+      });
+    });
+  };
 
   render() {
     const user = this.state.user;
@@ -33,7 +49,7 @@ class App extends Component {
           <Home path="/" user={user} />
           <Login path="/login" />
           <Meetings path="/meetings" />
-          <Register path="/register" />
+          <Register path="/register" registerUser={this.registerUser} />
         </Router>
       </>
     );
