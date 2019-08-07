@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FormMessage from "../FormMessage/FormMessage";
+import firebase from "../Firebase";
 
 class Register extends Component {
   state = {
@@ -28,10 +29,29 @@ class Register extends Component {
     );
   };
 
+  handleSubmit = event => {
+    const regInfo = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.passwordOne
+    };
+    event.preventDefault();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(regInfo.email, regInfo.password)
+      .catch(error => {
+        if (error.message !== null) {
+          this.setState({ errorMessage: error.message });
+        } else {
+          this.setState({ errorMessage: null });
+        }
+      });
+  };
+
   render() {
     const message = this.state.errorMessage;
     return (
-      <form className="mt-3">
+      <form className="mt-3" onSubmit={this.handleSubmit}>
         <div className="container">
           <div className="row justify content-center">
             <div className="col-lg-8">
