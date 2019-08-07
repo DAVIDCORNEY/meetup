@@ -17,10 +17,14 @@ class App extends Component {
   };
 
   componentDidMount() {
-    const ref = firebase.database().ref("user");
-    ref.on("value", snapshot => {
-      let DBUser = snapshot.val();
-      this.setState({ user: DBUser });
+    firebase.auth().onAuthStateChanged(DBUser => {
+      if (DBUser) {
+        this.setState({
+          user: DBUser,
+          displayName: DBUser.displayName,
+          userID: DBUser.uid
+        });
+      }
     });
   }
 
