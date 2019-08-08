@@ -70,6 +70,11 @@ class CheckIn extends Component {
                       placeholder="Email"
                     />
                   </section>
+                  <div className="form-group text-right mb-0">
+                    <button className="btn btn-primary" type="submit">
+                      Check In
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
