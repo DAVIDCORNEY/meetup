@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../Firebase";
 import { GoTrashcan } from "react-icons/go";
+import { navigate } from "@reach/router";
 
 class MeetingsList extends Component {
   deleteMeeting = (event, whichMeeting) => {
@@ -25,6 +26,15 @@ class MeetingsList extends Component {
               className="btn btn-sm btn-outline-secondary"
               title="Delete Meeting"
               onClick={event => this.deleteMeeting(event, item.meetingID)}
+            >
+              <GoTrashcan />
+            </button>
+            <button
+              className="btn btn-sm btn-outline-secondary"
+              title="Check In Meeting"
+              onClick={() =>
+                navigate(`/checkin/${this.props.userID}/${item.meetingID}`)
+              }
             >
               <GoTrashcan />
             </button>
