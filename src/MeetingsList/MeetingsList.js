@@ -1,7 +1,16 @@
 import React, { Component } from "react";
+import firebase from "../Firebase";
 import { GoTrashcan } from "react-icons/go";
 
 class MeetingsList extends Component {
+  deleteMeeting = (event, whichMeeting) => {
+    event.preventDefault();
+    const ref = firebase
+      .database()
+      .ref(`meetings/${this.props.userID}/${whichMeeting}`);
+    ref.remove();
+  };
+
   render() {
     const { meetings } = this.props;
     const myMeetings = meetings.map(item => {
