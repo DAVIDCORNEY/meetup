@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import firebase from "./Firebase";
 import MeetingsList from "../MeetingsList/MeetingsList";
 
 class Meetings extends Component {
