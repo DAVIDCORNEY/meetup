@@ -52,6 +52,8 @@ class CheckIn extends Component {
                       id="displayName"
                       name="displayName"
                       placeholder="Name"
+                      value={this.state.displayName}
+                      onChange={this.handleUserInput}
                     />
                   </section>
                   <section className="form-group">
@@ -68,6 +70,8 @@ class CheckIn extends Component {
                       id="email"
                       name="email"
                       placeholder="Email"
+                      value={this.state.email}
+                      onChange={this.handleUserInput}
                     />
                   </section>
                   <div className="form-group text-right mb-0">
