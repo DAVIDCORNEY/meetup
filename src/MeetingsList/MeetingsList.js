@@ -14,6 +14,7 @@ class MeetingsList extends Component {
             <button
               className="btn btn-sm btn-outline-secondary"
               title="Delete Meeting"
+              onClick={event => this.deleteMeeting(event, item.meetingID)}
             >
               Button
             </button>
