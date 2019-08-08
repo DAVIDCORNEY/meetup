@@ -26,7 +26,7 @@ class CheckIn extends Component {
       attendeeName: this.state.displayName,
       attendeeEmail: this.state.email
     });
-    navigate(`./attendees/${this.props.userID}/${this.props.meetingID}`);
+    navigate(`/attendees/${this.props.userID}/${this.props.meetingID}`);
   };
 
   render() {
