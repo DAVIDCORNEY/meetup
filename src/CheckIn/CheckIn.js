@@ -17,6 +17,17 @@ class CheckIn extends Component {
     });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    const ref = firebase
+      .database()
+      .ref(`meetings/${this.props.userID}/${this.props.meetingID}/attendees`);
+    ref.push({
+      attendeeName: this.state.displayName,
+      attendeeEmail: this.state.email
+    });
+  };
+
   render() {
     return <div />;
   }
