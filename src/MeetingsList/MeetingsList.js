@@ -5,7 +5,7 @@ class MeetingsList extends Component {
   render() {
     const { meetings } = this.props;
     const myMeetings = meetings.map(item => {
-      this.return(
+      return (
         <div className="list-group-item d-flex" key={item.meetingID}>
           <section className="pl-3 text-left align-self-center">
             {item.meetingName}
