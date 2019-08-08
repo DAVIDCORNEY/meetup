@@ -7,6 +7,16 @@ class CheckIn extends Component {
     displayName: "",
     email: ""
   };
+
+  handleUserInput = event => {
+    const inputName = event.target.name;
+    const inputValue = event.target.value;
+
+    this.setState({
+      [inputName]: inputValue
+    });
+  };
+
   render() {
     return <div />;
   }
