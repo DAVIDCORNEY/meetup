@@ -24,6 +24,8 @@ class App extends Component {
           displayName: DBUser.displayName,
           userID: DBUser.uid
         });
+      } else {
+        this.setState({ user: null });
       }
     });
   }
