@@ -30,7 +30,7 @@ class App extends Component {
           let meetingsList = [];
           for (let item in meetings) {
             meetingsList.push({
-              meetingId: item,
+              meetingID: item,
               meetingName: meetings[item].meetingName
             });
           }
