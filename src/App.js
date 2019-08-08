@@ -8,6 +8,7 @@ import Navigation from "./Navigation/Navigation";
 import Login from "./Login/Login";
 import Meetings from "./Meetings/Meetings";
 import Register from "./Register/Register";
+import CheckIn from "./CheckIn/CheckIn";
 
 class App extends Component {
   state = {
