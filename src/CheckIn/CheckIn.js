@@ -54,6 +54,22 @@ class CheckIn extends Component {
                       placeholder="Name"
                     />
                   </section>
+                  <section className="form-group">
+                    <label
+                      className="form-control-label sr-only"
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      required
+                      className="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                    />
+                  </section>
                 </div>
               </div>
             </div>
