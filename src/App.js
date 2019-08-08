@@ -34,6 +34,10 @@ class App extends Component {
               meetingName: meetings[item].meetingName
             });
           }
+          this.setState({
+            meetings: meetingsList,
+            numMeetings: meetingsList.length
+          });
         });
       } else {
         this.setState({ user: null });
