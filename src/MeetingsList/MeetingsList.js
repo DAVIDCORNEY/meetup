@@ -36,7 +36,7 @@ class MeetingsList extends Component {
                 navigate(`/checkin/${this.props.userID}/${item.meetingID}`)
               }
             >
-              <GoTrashcan />
+              <FaLink />
             </button>
           </section>
 
