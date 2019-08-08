@@ -24,6 +24,17 @@ class App extends Component {
           displayName: DBUser.displayName,
           userID: DBUser.uid
         });
+        const meetingsRef = firebase.database().ref("meetings/" + DBUser.uid);
+        meetingsRef.on("value", snapshot => {
+          let meetings = snapshot.val();
+          let meetingsList = [];
+          for (let item in meetings) {
+            meetingsList.push({
+              meetingId: item,
+              meetingName: meetings[item].meetingName
+            });
+          }
+        });
       } else {
         this.setState({ user: null });
       }
