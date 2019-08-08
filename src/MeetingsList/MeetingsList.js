@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { GoTrashcan } from "react-icons/go";
 
 class MeetingsList extends Component {
   render() {
@@ -16,7 +17,7 @@ class MeetingsList extends Component {
               title="Delete Meeting"
               onClick={event => this.deleteMeeting(event, item.meetingID)}
             >
-              Button
+              <GoTrashcan />
             </button>
           </section>
 
