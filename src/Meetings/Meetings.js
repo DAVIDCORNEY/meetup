@@ -1,6 +1,23 @@
 import React, { Component } from "react";
 
 class Meetings extends Component {
+  state = {
+    meetingName: ""
+  };
+
+  handleUserInput = event => {
+    const inputName = event.target.name;
+    const inputValue = event.target.value;
+
+    this.setState({ [inputName]: inputValue });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.addMeeting(this.state.meetingName);
+    this.setState({ meetingName: "" });
+  };
+
   render() {
     return (
       <div className="container mt-4">
@@ -9,7 +26,7 @@ class Meetings extends Component {
             <h1 className="font-weight-light">Add a Meeting</h1>
             <div className="card bg-light">
               <div className="card-body text-center">
-                <form className="formgroup">
+                <form className="formgroup" onSubmit={this.handleSubmit}>
                   <div className="input-group input-group-lg">
                     <input
                       type="text"
@@ -17,6 +34,8 @@ class Meetings extends Component {
                       name="meetingName"
                       placeholder="Meeting Name"
                       aria-describedby="buttonAdd"
+                      value={this.state.meetingName}
+                      onChange={this.handleUserInput}
                     />
                     <div className="input-group-append">
                       <button
