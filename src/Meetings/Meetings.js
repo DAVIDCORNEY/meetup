@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import firebase from "./Firebase";
 import MeetingsList from "../MeetingsList/MeetingsList";
 
 class Meetings extends Component {
@@ -66,7 +65,10 @@ class Meetings extends Component {
 
               {this.props.meetings && (
                 <div className="list-group list-group-flush">
-                  <MeetingsList meetings={this.props.meetings} />
+                  <MeetingsList
+                    meetings={this.props.meetings}
+                    userID={this.props.userID}
+                  />
                 </div>
               )}
             </div>
