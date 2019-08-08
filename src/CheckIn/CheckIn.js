@@ -30,7 +30,37 @@ class CheckIn extends Component {
   };
 
   render() {
-    return <div />;
+    return (
+      <form className="mt-3">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <div className="card bg-light">
+                <div className="card-body">
+                  <h3 className="font-weight-light mb-3">Check In</h3>
+                  <section className="form-group">
+                    <label
+                      className="form-control-label sr-only"
+                      htmlFor="displayName"
+                    >
+                      Name
+                    </label>
+                    <input
+                      required
+                      className="form-control"
+                      type="text"
+                      id="displayName"
+                      name="displayName"
+                      placeholder="Name"
+                    />
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    );
   }
 }
 
