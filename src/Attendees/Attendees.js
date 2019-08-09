@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../Firebase";
+import AttendeesList from "../AttendeesList/AttendeesList";
 
 class Attendees extends Component {
   state = {
@@ -34,7 +35,7 @@ class Attendees extends Component {
             <h1 className="font-weight-light text-center">Attendees</h1>
           </div>
         </div>
-        List
+        <AttendeesList />
       </div>
     );
   }
