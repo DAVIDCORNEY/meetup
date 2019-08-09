@@ -12,7 +12,7 @@ const AttendeesList = ({ attendees, userID, adminUser, meetingID }) => {
         <div className="card">
           <div
             className={
-              "card-body px-3 py-2 d-flex align-items-center" +
+              "card-body px-3 py-2 d-flex align-items-center " +
               (admin ? "" : "justify-content-center")
             }
           >
