@@ -20,6 +20,9 @@ class Attendees extends Component {
           attendeeEmail: attendees[item].attendeeEmail
         });
       }
+      this.setState({
+        attendees: attendeesList
+      });
     });
   }
 
