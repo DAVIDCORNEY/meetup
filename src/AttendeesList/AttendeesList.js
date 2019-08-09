@@ -9,9 +9,13 @@ const AttendeesList = ({ attendees }, userID, adminUser) => {
         key={attendee.attendeeID}
       >
         <div className="card">
-          <div className="card-body px-3 py-2 d-flex align-items-center justify-content-center">
-            <div>{attendee.attendeeName}</div>
-          </div>
+          <div
+            className={"card-body px-3 py-2 d-flex align-items-center"(
+              admin ? "" : "justify-content-center"
+            )}
+          />
+
+          <div>{attendee.attendeeName}</div>
         </div>
       </div>
     );
