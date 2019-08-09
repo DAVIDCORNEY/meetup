@@ -1,6 +1,7 @@
 import React from "react";
+import { GoTrashcan } from "react-icons/go";
 
-const AttendeesList = ({ attendees }, userID, adminUser) => {
+const AttendeesList = ({ attendees, userID, adminUser, meetingID }) => {
   const admin = adminUser === userID ? true : false;
   const allAttendees = attendees.map(attendee => {
     return (
@@ -10,12 +11,26 @@ const AttendeesList = ({ attendees }, userID, adminUser) => {
       >
         <div className="card">
           <div
-            className={"card-body px-3 py-2 d-flex align-items-center"(
-              admin ? "" : "justify-content-center"
+            className={
+              "card-body px-3 py-2 d-flex align-items-center" +
+              (admin ? "" : "justify-content-center")
+            }
+          >
+            {admin && (
+              <div className="btn-group pr-2">
+                <button
+                  className="btn btn-sm btn-outline-secondary"
+                  title="Delete Attendee"
+                  onClick={event =>
+                    this.deleteAttendee(event, meetingID, attendee.attendeeID)
+                  }
+                >
+                  <GoTrashcan />
+                </button>
+              </div>
             )}
-          />
-
-          <div>{attendee.attendeeName}</div>
+            <div>{attendee.attendeeName}</div>
+          </div>
         </div>
       </div>
     );
