@@ -5,6 +5,13 @@ class Attendees extends Component {
   state = {
     attendees: []
   };
+
+  componentDidMount() {
+    const ref = firebase
+      .database()
+      .ref(`meetings/${this.props.userID}/${this.props.meetingID}/attendees`);
+  }
+
   render() {
     return (
       <div className="container mt-4">
