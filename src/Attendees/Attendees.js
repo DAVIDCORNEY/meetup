@@ -39,6 +39,7 @@ class Attendees extends Component {
           userID={this.props.userID}
           adminUser={this.props.adminUser}
           attendees={this.state.attendees}
+          meetingID={this.props.meetingID}
         />
       </div>
     );
