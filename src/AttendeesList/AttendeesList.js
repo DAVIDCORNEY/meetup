@@ -1,6 +1,7 @@
 import React from "react";
 
-const AttendeesList = ({ attendees }) => {
+const AttendeesList = ({ attendees }, userID, adminUser) => {
+  const admin = adminUser === userID ? true : false;
   const allAttendees = attendees.map(attendee => {
     return (
       <div
