@@ -31,8 +31,11 @@ class AttendeesList extends Component {
               {admin && (
                 <div className="btn-group pr-2">
                   <button
-                    className="btn btn-sm btn-outline-secondary"
-                    title="Delete Attendee"
+                    className={
+                      "btn btn-sm " +
+                      (item.star ? "btn-info" : "btn-outline-secondary")
+                    }
+                    title="Star a user"
                   >
                     <GoStar />
                   </button>
