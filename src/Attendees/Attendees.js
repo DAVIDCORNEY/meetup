@@ -29,6 +29,15 @@ class Attendees extends Component {
     });
   }
 
+  handleUserInput = event => {
+    const inputName = event.target.name;
+    const inputValue = event.target.value;
+
+    this.setState({
+      [inputName]: inputValue
+    });
+  };
+
   render() {
     return (
       <div className="container mt-4">
