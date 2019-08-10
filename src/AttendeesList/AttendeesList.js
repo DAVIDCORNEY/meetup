@@ -33,6 +33,10 @@ class AttendeesList extends Component {
                   <button
                     className="btn btn-sm btn-outline-secondary"
                     title="Delete Attendee"
+                  />
+                  <button
+                    className="btn btn-sm btn-outline-secondary"
+                    title="Delete Attendee"
                     onClick={event =>
                       this.deleteAttendee(event, meetingID, attendee.attendeeID)
                     }
