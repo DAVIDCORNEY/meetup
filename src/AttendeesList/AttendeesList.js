@@ -3,6 +3,15 @@ import { GoTrashcan } from "react-icons/go";
 import firebase from "../Firebase";
 
 class AttendeesList extends Component {
+  deleteAttendee = (event, whichMeeting, whichAttendee) => {
+    event.preventDefault();
+    const adminUser = this.props.adminUser;
+    const ref = firebase
+      .database()
+      .ref(`/meetings/${adminUser}/${whichMeeting}/attendees/${whichAttendee}`);
+    ref.remove();
+  };
+
   render() {
     const { attendees, userID, adminUser, meetingID } = this.props;
     const admin = adminUser === userID ? true : false;
