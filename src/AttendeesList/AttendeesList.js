@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GoTrashcan } from "react-icons/go";
+import { GoTrashcan, GoStar } from "react-icons/go";
 import firebase from "../Firebase";
 
 class AttendeesList extends Component {
@@ -33,7 +33,9 @@ class AttendeesList extends Component {
                   <button
                     className="btn btn-sm btn-outline-secondary"
                     title="Delete Attendee"
-                  />
+                  >
+                    <GoStar />
+                  </button>
                   <button
                     className="btn btn-sm btn-outline-secondary"
                     title="Delete Attendee"
