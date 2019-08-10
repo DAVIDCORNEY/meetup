@@ -39,6 +39,12 @@ class Attendees extends Component {
   };
 
   render() {
+    const filterAttendee = item =>
+      item.attendeeName
+        .toLowerCase()
+        .match(this.state.searchQuery.toLowerCase());
+    const filteredAttendees = this.state.attendees.filter(filterAttendee);
+
     return (
       <div className="container mt-4">
         <div className="row justify-content-center">
@@ -62,7 +68,7 @@ class Attendees extends Component {
         <AttendeesList
           userID={this.props.userID}
           adminUser={this.props.adminUser}
-          attendees={this.state.attendees}
+          attendees={filteredAttendees}
           meetingID={this.props.meetingID}
         />
       </div>
