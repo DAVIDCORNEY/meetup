@@ -1,5 +1,6 @@
 import React from "react";
 import { GoTrashcan } from "react-icons/go";
+import firebase from "../Firebase";
 
 const AttendeesList = ({ attendees, userID, adminUser, meetingID }) => {
   const admin = adminUser === userID ? true : false;
