@@ -12,6 +12,21 @@ class AttendeesList extends Component {
     ref.remove();
   };
 
+  toggleStar = (event, star, whichMeeting, whichAttendee) => {
+    event.preventDefault();
+    const { adminUser } = this.props;
+    const ref = firebase
+      .database()
+      .ref(
+        `/meetings/${adminUser}/${whichMeeting}/attendees/${whichAttendee}/star`
+      );
+    if (star === undefined) {
+      ref.set(true);
+    } else {
+      ref.set(!star);
+    }
+  };
+
   render() {
     const { attendees, userID, adminUser, meetingID } = this.props;
     const admin = adminUser === userID ? true : false;
@@ -33,9 +48,17 @@ class AttendeesList extends Component {
                   <button
                     className={
                       "btn btn-sm " +
-                      (item.star ? "btn-info" : "btn-outline-secondary")
+                      (attendee.star ? "btn-info" : "btn-outline-secondary")
                     }
                     title="Star a user"
+                    onClick={event =>
+                      this.toggleStar(
+                        event,
+                        attendee.star,
+                        meetingID,
+                        attendee.attendeeID
+                      )
+                    }
                   >
                     <GoStar />
                   </button>
