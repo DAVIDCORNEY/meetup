@@ -4,6 +4,7 @@ import AttendeesList from "../AttendeesList/AttendeesList";
 
 class Attendees extends Component {
   state = {
+    searchQuery: "",
     attendees: []
   };
 
