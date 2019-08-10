@@ -34,6 +34,19 @@ class Attendees extends Component {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <h1 className="font-weight-light text-center">Attendees</h1>
+
+            <div className="card bg-light mb-4">
+              <div className="card-body text-center">
+                <input
+                  type="text"
+                  name="searchQuery"
+                  placeholder="Search Attendees"
+                  className="form-control"
+                  value={this.state.searchQuery}
+                  onChange={this.handleUserInput}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <AttendeesList
