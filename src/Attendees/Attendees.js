@@ -62,7 +62,13 @@ class Attendees extends Component {
                     value={this.state.searchQuery}
                     onChange={this.handleUserInput}
                   />
-                  <div className="input-group-append" />
+                  <div className="input-group-append">
+                    <button
+                      className="btn btn-sm btn-outline-info"
+                      title="Reset"
+                      onClick={() => this.resetQuery}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
