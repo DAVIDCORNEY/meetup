@@ -21,11 +21,6 @@ class AttendeesList extends Component {
         `/meetings/${adminUser}/${whichMeeting}/attendees/${whichAttendee}/star`
       );
     ref.set(!star);
-    // if (star === false) {
-    //   ref.set(true);
-    // } else {
-    //   ref.set(!star);
-    // }
   };
 
   render() {
