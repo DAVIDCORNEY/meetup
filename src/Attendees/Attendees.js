@@ -42,7 +42,16 @@ class Attendees extends Component {
   resetSearch = event => {
     event.preventDefault();
     this.setState({
+      attendees: this.state.allAttendees,
       searchQuery: ""
+    });
+  };
+
+  randomAttendee = event => {
+    const random = Math.floor(Math.random() * this.state.allAttendees.length);
+    this.resetSearch();
+    this.setState({
+      attendees: [this.state.allAttendess[random]]
     });
   };
 
