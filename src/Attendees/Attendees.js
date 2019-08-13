@@ -39,6 +39,13 @@ class Attendees extends Component {
     });
   };
 
+  resetQuery = event => {
+    event.preventDefault();
+    this.setState({
+      searchQuery: ""
+    });
+  };
+
   render() {
     const filterAttendee = item =>
       item.attendeeName
@@ -67,7 +74,7 @@ class Attendees extends Component {
                     <button
                       className="btn btn-sm btn-outline-info"
                       title="Reset"
-                      onClick={() => this.resetQuery}
+                      onClick={event => this.resetQuery(event)}
                     >
                       <FaUndo />
                     </button>
