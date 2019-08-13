@@ -41,19 +41,18 @@ class Attendees extends Component {
     });
   };
 
-  resetSearch = event => {
-    event.preventDefault();
+  resetSearch = () => {
     this.setState({
       attendees: this.state.allAttendees,
       searchQuery: ""
     });
   };
 
-  randomAttendee = event => {
+  randomAttendee = () => {
     const random = Math.floor(Math.random() * this.state.allAttendees.length);
     this.resetSearch();
     this.setState({
-      attendees: [this.state.allAttendess[random]]
+      attendees: [this.state.allAttendees[random]]
     });
   };
 
@@ -85,14 +84,14 @@ class Attendees extends Component {
                     <button
                       className="btn btn-sm btn-outline-info"
                       title="Pick a Random Attendee"
-                      onClick={event => this.randomAttendee(event)}
+                      onClick={() => this.randomAttendee()}
                     >
                       <FaRandom />
                     </button>
                     <button
                       className="btn btn-sm btn-outline-info"
                       title="Reset"
-                      onClick={event => this.resetSearch(event)}
+                      onClick={() => this.resetSearch()}
                     >
                       <FaUndo />
                     </button>
