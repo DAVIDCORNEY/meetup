@@ -6,6 +6,7 @@ import { FaUndo, FaRandom } from "react-icons/fa";
 class Attendees extends Component {
   state = {
     searchQuery: "",
+    allAttendees: [],
     attendees: []
   };
 
@@ -25,7 +26,8 @@ class Attendees extends Component {
         });
       }
       this.setState({
-        attendees: attendeesList
+        attendees: attendeesList,
+        allAttendees: attendeesList
       });
     });
   }
