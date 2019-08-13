@@ -73,6 +73,13 @@ class Attendees extends Component {
                   <div className="input-group-append">
                     <button
                       className="btn btn-sm btn-outline-info"
+                      title="Random Attendee"
+                      onClick={event => this.randomAttendee(event)}
+                    >
+                      <FaUndo />
+                    </button>
+                    <button
+                      className="btn btn-sm btn-outline-info"
                       title="Reset"
                       onClick={event => this.resetSearch(event)}
                     >
