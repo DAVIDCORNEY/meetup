@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../Firebase";
 import AttendeesList from "../AttendeesList/AttendeesList";
+import { FaUndo } from "react-icons/fa";
 
 class Attendees extends Component {
   state = {
@@ -67,7 +68,9 @@ class Attendees extends Component {
                       className="btn btn-sm btn-outline-info"
                       title="Reset"
                       onClick={() => this.resetQuery}
-                    />
+                    >
+                      <FaUndo />
+                    </button>
                   </div>
                 </div>
               </div>
