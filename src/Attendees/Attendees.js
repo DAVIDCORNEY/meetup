@@ -53,14 +53,17 @@ class Attendees extends Component {
 
             <div className="card bg-light mb-4">
               <div className="card-body text-center">
-                <input
-                  type="text"
-                  name="searchQuery"
-                  placeholder="Search Attendees"
-                  className="form-control"
-                  value={this.state.searchQuery}
-                  onChange={this.handleUserInput}
-                />
+                <div className="input-group input-group-lg">
+                  <input
+                    type="text"
+                    name="searchQuery"
+                    placeholder="Search Attendees"
+                    className="form-control"
+                    value={this.state.searchQuery}
+                    onChange={this.handleUserInput}
+                  />
+                  <div className="input-group-append" />
+                </div>
               </div>
             </div>
           </div>
