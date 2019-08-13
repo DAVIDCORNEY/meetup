@@ -39,7 +39,7 @@ class Attendees extends Component {
     });
   };
 
-  resetQuery = event => {
+  resetSearch = event => {
     event.preventDefault();
     this.setState({
       searchQuery: ""
@@ -74,7 +74,7 @@ class Attendees extends Component {
                     <button
                       className="btn btn-sm btn-outline-info"
                       title="Reset"
-                      onClick={event => this.resetQuery(event)}
+                      onClick={event => this.resetSearch(event)}
                     >
                       <FaUndo />
                     </button>
