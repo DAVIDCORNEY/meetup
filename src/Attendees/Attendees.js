@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../Firebase";
 import AttendeesList from "../AttendeesList/AttendeesList";
-import { FaUndo } from "react-icons/fa";
+import { FaUndo, FaRandom } from "react-icons/fa";
 
 class Attendees extends Component {
   state = {
@@ -73,10 +73,10 @@ class Attendees extends Component {
                   <div className="input-group-append">
                     <button
                       className="btn btn-sm btn-outline-info"
-                      title="Random Attendee"
+                      title="Pick a Random Attendee"
                       onClick={event => this.randomAttendee(event)}
                     >
-                      <FaUndo />
+                      <FaRandom />
                     </button>
                     <button
                       className="btn btn-sm btn-outline-info"
