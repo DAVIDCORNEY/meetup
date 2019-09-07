@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaUsers } from "react-icons/fa";
+import { IoIosPeople } from "react-icons/io";
 import { Link } from "@reach/router";
 
 class Navigation extends Component {
@@ -7,10 +7,10 @@ class Navigation extends Component {
   render() {
     const { user, logoutUser } = this.props;
     return (
-      <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
+      <nav className="site-nav family-sans navbar navbar-expand bg-info navbar-dark higher">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
-            <FaUsers className="mr-1 mb-1 " />
+            <IoIosPeople className="mr-1 mb-1 " />
             MeetUp
           </Link>
           <div className="navbar-nav ml auto">
