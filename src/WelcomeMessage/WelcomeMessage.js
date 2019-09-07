@@ -11,7 +11,7 @@ class WelcomeMessage extends Component {
         </span>
         <Link
           to="/login"
-          className="font-weight-bold text-primary pl-1"
+          className="font-weight-bold text-info pl-1"
           onClick={event => logoutUser(event)}
         >
           log out
